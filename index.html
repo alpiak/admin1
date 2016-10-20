@@ -1,15 +1,128 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Title</title>
 
     <!-- Bootstrap stylesheet -->
     <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+    <!-- Custom stylesheet -->
+    <link rel="stylesheet" href="css/main.css">
 
 </head>
 <body>
+    <div id="header" class="bg-primary">
+        <br>
+        <div class="row">
+            <div class="col-xs-12 col-xs-offset-1">
+                <h1>管理后台</h1>
+            </div>
+        </div>
+        <br>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <form class="form-search">
+                    <div class="input-group input-group-lg">
+                        <input type="text" class="form-control" placeholder="Search for...">
+                        <div class="input-group-btn">
+                            <button type="button" class="btn btn-default">Go</button>
+                            <button type="button" class="btn btn-default dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown">
+                                Dropdown
+                                <span class="caret"></span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="dropdownMenu1">
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+                                <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <br>
+        <div class="row well">
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label class="col-sm-2 col-md-1" for="option1">选项</label>
+                    <div id="option1" class="btn-group col-sm-10 col-md-11" data-toggle="buttons">
+                        <label class="btn btn-primary btn-xs">
+                            <input type="checkbox" autocomplete="off"> Checkbox 1 (pre-checked)
+                        </label>
+                        <label class="btn btn-primary btn-xs">
+                            <input type="checkbox" autocomplete="off"> Checkbox 2
+                        </label>
+                        <label class="btn btn-primary btn-xs">
+                            <input type="checkbox" autocomplete="off"> Checkbox 3
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 col-md-1" for="option2">选项2</label>
+                    <div id="option2" class="btn-group col-sm-10 col-md-11" data-toggle="buttons">
+                        <label class="btn btn-primary btn-xs">
+                            <input type="checkbox" autocomplete="off"> Checkbox 1
+                        </label>
+                        <label class="btn btn-primary btn-xs">
+                            <input type="checkbox" autocomplete="off"> Checkbox 2
+                        </label>
+                        <label class="btn btn-primary btn-xs">
+                            <input type="checkbox" autocomplete="off"> Checkbox 3
+                        </label>
+                        <label class="btn btn-primary btn-xs">
+                            <input type="checkbox" autocomplete="off"> Checkbox 1
+                        </label>
+                        <label class="btn btn-primary btn-xs">
+                            <input type="checkbox" autocomplete="off"> Checkbox 2
+                        </label>
+                        <label class="btn btn-primary btn-xs">
+                            <input type="checkbox" autocomplete="off"> Checkbox 3
+                        </label>
+                        <label class="btn btn-primary btn-xs">
+                            <input type="checkbox" autocomplete="off"> Checkbox 1
+                        </label>
+                        <label class="btn btn-primary btn-xs">
+                            <input type="checkbox" autocomplete="off"> Checkbox 2
+                        </label>
+                        <label class="btn btn-primary btn-xs">
+                            <input type="checkbox" autocomplete="off"> Checkbox 3
+                        </label>
+                        <label class="btn btn-primary btn-xs">
+                            <input type="checkbox" autocomplete="off"> Checkbox 1
+                        </label>
+                        <label class="btn btn-primary btn-xs">
+                            <input type="checkbox" autocomplete="off"> Checkbox 2
+                        </label>
+                        <label class="btn btn-primary btn-xs">
+                            <input type="checkbox" autocomplete="off"> Checkbox 3
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-sm-2 col-md-1" for="option3">选项3</label>
+                    <div id="option3" class="btn-group col-sm-10 col-md-11" data-toggle="buttons">
+                        <label class="btn btn-primary btn-xs">
+                            <input type="checkbox" autocomplete="off"> Checkbox 1 (pre-checked)
+                        </label>
+                        <label class="btn btn-primary btn-xs">
+                            <input type="checkbox" autocomplete="off"> Checkbox 2
+                        </label>
+                        <label class="btn btn-primary btn-xs">
+                            <input type="checkbox" autocomplete="off"> Checkbox 3
+                        </label>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
 
+    <!-- JQuery -->
+    <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
     <!-- Bootstrap JavaScript -->
     <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 
