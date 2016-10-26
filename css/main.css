@@ -4,3 +4,11 @@ body {
 #header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
 }
+
+/** List item tool pane **/
+.tool-pane {
+    display: none;
+}
+:hover>.tool-pane {
+    display: block;
+}
