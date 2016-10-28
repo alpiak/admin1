@@ -2,13 +2,38 @@ body {
     background: #343434 url("../img/main-back.png") repeat;
 }
 #header {
+    background: #428bca;
+    background-image: -webkit-linear-gradient(right, #428bca 2%, #005791 100%), -webkit-radial-gradient(50% 116%, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%), -webkit-linear-gradient(149deg, rgba(255, 255, 255, 0.5) 7%, rgba(87, 87, 87, 0.5) 68%, rgba(85, 85, 85, 0.5) 76%, rgba(0, 0, 0, 0.5) 100%);
+    background-image: linear-gradient(270deg, #428bca 2%, #005791 100%), radial-gradient(50% 116%, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%), linear-gradient(270deg, rgba(255, 255, 255, 0.5) 7%, rgba(87, 87, 87, 0.5) 68%, rgba(85, 85, 85, 0.5) 76%, rgba(0, 0, 0, 0.5) 100%);
+    background-blend-mode: normal,multiply,multiply;
     box-shadow: 0 2px 5px rgba(0, 0, 0, .3);
 }
 
-/** List item tool pane **/
+/* List item tool pane */
 .tool-pane {
     display: none;
 }
-:hover>.tool-pane {
+#result-list :hover>*>*>.tool-pane {
     display: block;
+}
+
+/* Back to top */
+.totop {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 104400;
+    background: #005791;
+}
+.totop a, .totop a:visited {
+    display: block;
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+}
+.totop a:hover {
+    color: #eee;
+    text-decoration: none;
 }
