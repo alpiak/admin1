@@ -1,0 +1,15 @@
+<svg width="64" height="64" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+
+ <g>
+  <title>background</title>
+  <rect fill="none" id="canvas_background" height="402" width="582" y="-1" x="-1"/>
+ </g>
+ <g>
+  <title>Layer 1</title>
+  <rect id="svg_1" fill="#EEEEEE" height="64" width="64"/>
+  <g id="svg_2">
+   <text transform="matrix(4.4588114165879915,0,0,1.5277361869812012,-116.88453722428306,-11.3133445084095) " xml:space="preserve" text-anchor="start" font-family="Arial, Helvetica, Open Sans, sans-serif, monospace" font-size="10pt" id="svg_5" y="36.5" x="28.5" stroke-width="null" fill="#AAAAAA"/>
+   <text transform="matrix(1,0,0,1,0,0) " font-weight="bold" xml:space="preserve" text-anchor="start" font-family="Arial, Helvetica, Open Sans, sans-serif, monospace" font-size="NaN" id="svg_6" y="36.5" x="11.5" stroke-width="null" fill="#AAAAAA">VIDEO</text>
+  </g>
+ </g>
+</svg>

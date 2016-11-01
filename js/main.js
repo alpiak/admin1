@@ -1,5 +1,5 @@
 // Scroll to Top
-$(".totop").hide();
+$('.totop').hide();
 
 $(function() {
     $(window).scroll(function() {
