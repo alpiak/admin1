@@ -1,0 +1,745 @@
+@charset "UTF-8";
+/*! sass-mixins - v0.11.0 - 2014-10-20 */
+/**
+ * @description
+ * Generates keyframe animations
+ *
+ * @author drublic
+ *
+ * @link caniuse http://caniuse.com/#feat=css-animation
+ * @link spec http://www.w3.org/TR/css3-animations/
+ *
+ * @param values
+ * @returns
+ *   -webkit-animation: <values>;
+ *           animation: <values>;
+ *
+ * @example
+ *   .selector {
+ *     @include x-animation(jump 1s ease-out);
+ *   }
+ */
+/*
+ * @example
+ *    @include x-keyframes(jump) {
+ *      from { top: 0; }
+ *      to { top: -10px; }
+ *   }
+ */
+/**
+ * @description
+ * Generates `appearance` for a given element
+ *
+ * @author romamatusevich
+ *
+ * @link MDN https://developer.mozilla.org/en-US/docs/Web/CSS/-moz-appearance
+ * @link css-tricks http://css-tricks.com/almanac/properties/a/appearance/
+ * @link spec http://www.w3.org/TR/2004/CR-css3-ui-20040511/#appearance
+ *
+ * @param value
+ * @returns
+ *   -webkit-appearance: <value>;
+ *      -moz-appearance: <value>;
+ *           appearance: <value>;
+ *
+ * @example
+ *   .selector {
+ *     @include x-appearance(button);
+ *   }
+ */
+/**
+ * @description
+ * Generates `background-size` output for a given element.
+ *
+ * @author drublic
+ *
+ * @link caniuse http://caniuse.com/background-img-opts
+ * @link spec http://www.w3.org/TR/css3-background/
+ *
+ * @param value
+ * @returns
+ *   -webkit-background-size: $args;
+ *           background-size: $args;
+ *
+ * @example
+ *   .selector {
+ *     @include x-background-size(100% auto);
+ *   }
+ */
+/**
+ * @description
+ * Generates cross-browser-compatible `border-radius` for a given element
+ *
+ * @author drublic
+ *
+ * @link caniuse http://caniuse.com/border-radius
+ * @link spec http://www.w3.org/TR/css3-background/#corners
+ *
+ * @param values
+ * @returns
+ *   -webkit-border-radius: <values>;
+ *           border-radius: <values>;
+ *
+ * @example
+ *   .selector {
+ *     @include x-border-radius(20px 10px);
+ *   }
+ */
+/**
+ * @description
+ * Generates cross-browser-compatible `box-shadow` for a given element
+ *
+ * @author drublic
+ *
+ * @link caniuse http://caniuse.com/css-boxshadow
+ * @link spec http://www.w3.org/TR/css3-background/#the-box-shadow
+ *
+ * @param values
+ * @returns
+ *   -webkit-box-shadow: <values>;
+ *           box-shadow: <values>;
+ *
+ * @example
+ *   .selector {
+ *     @include x-box-shadow(5px 5px 10px 5px #aaa);
+ *   }
+ */
+/**
+ * @description
+ * Generates cross-browser-compatible `box-sizing` output for a given element.
+ *
+ * @author drublic
+ *
+ * @link caniuse
+ * @link spec
+ *
+ * @param type
+ * @returns
+ *   -webkit-box-sizing: <type>;
+ *      -moz-box-sizing: <type>;
+ *           box-sizing: <type>;
+ *
+ * @example
+ *   .selector {
+ *     @include x-box-sizing;
+ *   }
+ */
+/**
+ * @description
+ * These mixins generates Media Queries
+ *
+ * @author drublic
+ *
+ * @link caniuse http://caniuse.com/#feat=css-mediaqueries
+ * @link spec http://www.w3.org/TR/css3-mediaqueries/
+ *
+ * Note: Please use the CSS unit `em` for device-width in order to stay
+ * responsive.
+ */
+/**
+ * @param device-width {number}
+ * @content
+ * @returns
+ *   @media screen and (min-width: <device-width>) {
+ *      <content>
+ *   }
+ *
+ * @example
+ *   .selector {
+ *     x-at-least(40em) { width: 60%; }
+ *   }
+ */
+/**
+ * @param device-width {number}
+ * @content
+ * @returns
+ *   @media screen and (max-width: <device-width - 0.01>) {
+ *      <content>
+ *   }
+ *
+ * @example
+ *   .selector {
+ *     x-until(40em) { width: 100%; }
+ *   }
+ */
+/**
+ * @author romamatusevich
+ *
+ * @param point{string}, bp-mobile-width{number}, bp-tablet-width{number}
+ * @content
+ * @returns
+ *   @media (max-width: <bp-mobile-width>) {
+ *      <content>
+ *   }
+ *
+ * @example
+ *   .selector {
+ *     x-breakpoints(mobile,  320px) { width: 100%; }
+ *   }
+ */
+/**
+ * @description
+ * Generates `calc` function which allows mathematical expressions for a given property
+ *
+ * @author romamatusevich
+ *
+ * @link spec http://www.w3.org/TR/css3-values/#calc
+ * @link caniuse http://caniuse.com/calc
+ *
+ * @param property
+ * @param expression
+ *
+ * @returns
+ *    <property>: -webkit-calc(<expression>);
+ *    <property>: calc(<expression>);
+ *
+ * @example
+ *   .selector {
+ *     @include x-calc(width, "600px - 2em");
+ *   }
+ */
+/**
+ * @description
+ * Generates flexbox properties for a given element
+ *
+ * @author romamatusevich
+ *
+ * @link MDN https://developer.mozilla.org/en-US/docs/Web/Guide/CSS/Flexible_boxes
+ * @link css-tricks http://css-tricks.com/snippets/css/a-guide-to-flexbox/
+ * @link spec http://www.w3.org/TR/css3-flexbox/
+ */
+/**
+ * @returns
+ *   display: -webkit-box;
+ *   display: -moz-box;
+ *   display: -ms-flexbox;
+ *   display: -webkit-flex;
+ *   display: flex;
+ *
+ * @example
+ *   .selector {
+ *     @include x-display-flex;
+ *   }
+ */
+/**
+ * @param values
+ * @returns
+ *   -webkit-box-flex: <values>;
+ *      -moz-box-flex: <values>;
+ *       -webkit-flex: <values>;
+ *           -ms-flex: <values>;
+ *               flex: <values>;
+ *
+ * @example
+ *   .selector {
+ *     @include x-flex(1 1 auto);
+ *   }
+ */
+/**
+ * @param value
+ * @returns
+ *   -webkit-box-ordinal-group: <value>;
+ *      -moz-box-ordinal-group: <value>;
+ *              -ms-flex-order: <value>;
+ *               -webkit-order: <value>;
+ *                       order: <value>;
+ *
+ * @example
+ *   .selector {
+ *     @include x-order(1);
+ *   }
+ */
+/**
+ * @param value
+ * @returns
+ *    -webkit-flex-wrap: <value>;
+ *        -ms-flex-wrap: <value>;
+ *            flex-wrap: <value>;
+ *
+ * @example
+ *   .selector {
+ *     @include x-flex-wrap(wrap);
+ *   }
+ */
+/**
+ * @param value
+ * @returns
+ *   -webkit-align-content: <value>;
+ *      -moz-align-content: <value>;
+ *      -ms-flex-line-pack: <value>;
+ *           align-content: <value>;
+ * @example
+ *   .selector {
+ *     @include x-align-content(center);
+ *   }
+ */
+/**
+ * @param value
+ * @returns
+ *    -webkit-box-direction: <value>;
+ *     -moz-box-direction: <value>;
+ *       -webkit-box-orient: <value>;
+ *        -moz-box-orient: <value>;
+ *   -webkit-flex-direction: <value>;
+ *      -moz-flex-direction: <value>;
+ *       -ms-flex-direction: <value>;
+ *           flex-direction: <value>;
+ * @example
+ *   .selector {
+ *     @include x-flex-direction(row-reverse);
+ *   }
+ */
+/* ToDo: add flex-grow, flex-shrink, flex-basis, flex-flow, align-items, align-self, justify-content mixins */
+/**
+ * @description
+ * Generates a linear gradient for a given element with a fallback color.
+ *
+ * @author drublic
+ *
+ * @link caniuse
+ * @link spec
+ *
+ * @dependency helper-gradient-angle
+ * @param direction {'to bottom'|'to right'|'to top'|'to left'|<degree>}
+ * @param fallback {color}
+ * @param from {color}
+ * @param to {color}
+ * @default 'to bottom', #ccc, #ccc, #aaa
+ *
+ * @returns
+ *   background-color: <fallback>;
+ *   background-image: -webkit-gradient(linear, <direction - old converted>, from(<from>), to(<to>));
+ *   background-image: -webkit-linear-gradient(<direction - converted>, <from>, <to>);
+ *   background-image:         linear-gradient(<direction>, <from>, <to>);
+ *
+ * @example
+ *   .selector {
+ *     @include x-linear-gradient("to bottom", #ccc, #ddd, #bbb);
+ *   }
+ *
+ * Note: By default this linear-gradient-mixin encourages people to use the
+ * latest CSS-syntax for gradients.
+ */
+/**
+ * @description
+ * This mixin generates multiple backgrounds
+ *
+ * @author drublic
+ *
+ * @link caniuse http://caniuse.com/css-gradients
+ * @link spec http://www.w3.org/TR/2011/WD-css3-images-20110217/#linear-gradients
+ */
+/*
+ * A function for prefixing gradients
+ *
+ * @param mode {'webkit-old'|'webkit'|''}
+ * @param gradient
+ * @returns
+ *   -<mode>-linear-gradient(<gradient>);
+ */
+/*
+ * Generates multiple backgrounds
+ *
+ * @param backgrounds {list}
+ *
+ * @example
+ *   .selector {
+ *     @include x-multiple-backgrounds(
+ *       rgba(0, 0, 0, 0.3),
+ *       url('../img/html5_logo.png') top right no-repeat,
+ *       (linear-gradient, to bottom, #aaa, #ddd)
+ *     );
+ *   }
+ */
+/**
+ * @description
+ * This mixin creates (endless) multiple color stops in gradients just with one
+ * call for the mixin.
+ *
+ * @author drublic
+ *
+ * @link caniuse http://caniuse.com/css-gradients
+ * @link spec http://www.w3.org/TR/2011/WD-css3-images-20110217/#linear-gradients
+ *
+ * @param stops {list}
+ * @returns
+ *   background-image: -webkit-linear-gradient(top, <stops[1]>, <stops[2]>, ..., <stops[n]>);
+ *   background-image:         linear-gradient(to bottom, <stops[1]>, <stops[2]>, ..., <stops[n]>);
+ *
+ * @example
+ *   .selector {
+ *     @include x-multiple-colored-gradient((
+ *         "top",
+ *         #f22 0%,
+ *         #f2f 15%,
+ *         #22f 30%,
+ *         #2ff 45%,
+ *         #2f2 60%,
+ *         #2f2 75%,
+ *         #ff2 90%,
+ *         #f22 100%
+ *     ));
+ *   }
+ *
+ * Note: This mixis does not define a fallback-color for your background as it
+ * is likely you want to add an image or something. Please specify one by
+ * yourself.
+ */
+/**
+ * @description
+ * Generates `opacity` output for a given element and adds a filter for old IE.
+ *
+ * @author bartveneman
+ *
+ * @link caniuse http://caniuse.com/css-opacity
+ * @link spec http://www.w3.org/TR/css3-color/#transparency
+ *
+ * @param value
+ * @returns
+ *   opacity: <value>;
+ *    filter: alpha(opacity=<value * 100>);
+ *
+ * @example
+ *   .selector {
+ *     @include x-opacity(0.3);
+ *   }
+ */
+/**
+ * @description
+ * Generates `placeholder` content for a given element
+ *
+ * @author romamatusevich
+ *
+ * @link MDN https://developer.mozilla.org/en-US/docs/Web/CSS/:-moz-placeholder
+ * @link css-tricks http://css-tricks.com/snippets/css/style-placeholder-text/
+ *
+ * @returns
+ *    &::-webkit-input-placeholder {
+ *        <content property 1>: <content value 1>;
+ *        ...
+ *        <content property n>: <content value n>;
+ *    }
+ *    &::-moz-placeholder {
+ *        <content property 1>: <content value 1>;
+ *        ...
+ *        <content property n>: <content value n>;
+ *    }
+ *    &:-ms-input-placeholder {
+ *        <content property 1>: <content value 1>;
+ *        ...
+ *        <content property n>: <content value n>;
+ *    }
+ *
+ * @example
+ *   .selector {
+ *     @include x-placeholder {
+ *         color: #bada55;
+ *         font-weight: bold;
+ *     }
+ *   }
+ */
+/**
+ * @description
+ * This mixin enables you to use the CSS3 value `rem`, which lets you define
+ * property sizes based on the root elements font-size.
+ *
+ * @author drublic
+ *
+ * @link caniuse http://caniuse.com/rem
+ * @link spec http://www.w3.org/TR/css3-values/#relative0
+ *
+ * Note: Depending on the font-size of the root-element `rem` calculates a
+ * property of a current element. The fallback solution accepts a
+ * `default-font-size`-argument which is 16px by default.
+ */
+/*
+ * Returns a number without unit. E.g. 30px -> 30
+ * Borrowed from https://github.com/zurb/foundation/blob/master/scss/foundation/_functions.scss
+ *
+ * @param value {String}
+ * @returns
+ *   <Number>
+ */
+/*
+ * Outputs properties that use rem with a px fallback.
+ * It also takes px values and converts them to rem.
+ *
+ * @param property
+ * @param values
+ * @param default-font-size int optional
+ * @returns
+ *   <property>: <parsed value>px;
+ *   <property>: <parsed value>rem;
+ *
+ * @example
+ *   .selector {
+ *     @include x-rem(font-size, 1.3);
+ *     @include x-rem(padding, 20px);
+ *   }
+ */
+.center {
+  margin: 0 auto; }
+
+.kkplayer {
+  position: relative;
+  overflow: hidden; }
+  .kkplayer.mobileFullScreen, .kkplayer.pcFullScreen {
+    position: absolute;
+    height: 100% !important;
+    width: 100% !important;
+    left: 0;
+    top: 0;
+    background-color: #000; }
+    .kkplayer.mobileFullScreen video, .kkplayer.pcFullScreen video {
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute; }
+    .kkplayer.mobileFullScreen .kkplayer-kkcontrols, .kkplayer.pcFullScreen .kkplayer-kkcontrols {
+      z-index: 2147483648 !important; }
+  .kkplayer video {
+    width: 100%;
+    height: 100%;
+    display: block; }
+    .kkplayer video::-webkit-media-controls {
+      display: none !important; }
+    .kkplayer video::-webkit-media-controls-enclosure {
+      display: none !important; }
+    .kkplayer video::-webkit-media-controls-panel {
+      display: none !important; }
+    .kkplayer video::-webkit-media-controls-wireless-playback-status {
+      display: none !important; }
+  .kkplayer .kkplayer-kkcontrols {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0; }
+  .kkplayer .kkplayer-vcontrols {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    text-align: center; }
+    .kkplayer .kkplayer-vcontrols .kkplayer-vcontrol {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-transition: opacity 0.3s ease;
+      transition: opacity 0.3s ease; }
+      .kkplayer .kkplayer-vcontrols .kkplayer-vcontrol:before {
+        position: absolute;
+        width: 60px;
+        left: 50%;
+        top: 50%;
+        margin-left: -30px;
+        margin-top: -21px;
+        font-size: 30px;
+        color: #fff; }
+    .kkplayer .kkplayer-vcontrols .kkplayer-icon-spinner:before {
+      -webkit-animation: spinner 2s linear infinite;
+      animation: spinner 2s linear infinite; }
+    .kkplayer .kkplayer-vcontrols .kkplayer-icon-play,
+    .kkplayer .kkplayer-vcontrols .kkplayer-icon-replay {
+      cursor: pointer;
+      background-color: rgba(0, 0, 0, 0.4); }
+  .kkplayer .kkplayer-controls {
+    z-index: 2147483648 !important;
+    visibility: visible !important;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    height: 30px;
+    z-index: 10;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    -webkit-transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
+    -webkit-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    transform: translate(0, 0);
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none; }
+    .kkplayer .kkplayer-controls button {
+      outline: none;
+      background: none;
+      border: none;
+      padding: 0;
+      margin: 0;
+      font-size: 16px;
+      color: #fff; }
+    .kkplayer .kkplayer-controls .kkplayer-play-control {
+      -webkit-box-flex: none;
+      -moz-box-flex: none;
+      -webkit-flex: none;
+      -ms-flex: none;
+      flex: none;
+      height: 100%;
+      width: 40px;
+      cursor: pointer; }
+      .kkplayer .kkplayer-controls .kkplayer-play-control:hover:before {
+        text-shadow: 0 0 1em #fff; }
+    .kkplayer .kkplayer-controls .kkplayer-volume-control {
+      -webkit-box-flex: none;
+      -moz-box-flex: none;
+      -webkit-flex: none;
+      -ms-flex: none;
+      flex: none;
+      cursor: pointer;
+      height: 100%; }
+      .kkplayer .kkplayer-controls .kkplayer-volume-control .kkplayer-volume-btn {
+        width: 40px;
+        height: 100%;
+        float: left;
+        cursor: pointer; }
+        .kkplayer .kkplayer-controls .kkplayer-volume-control .kkplayer-volume-btn:hover:before {
+          text-shadow: 0 0 1em #fff; }
+      .kkplayer .kkplayer-controls .kkplayer-volume-control .volume-panel {
+        width: 73px;
+        height: 100%;
+        float: left; }
+      .kkplayer .kkplayer-controls .kkplayer-volume-control .volume-bar {
+        position: relative;
+        height: 100%;
+        display: -webkit-box;
+        display: -moz-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-align-items: center;
+        align-items: center; }
+        .kkplayer .kkplayer-controls .kkplayer-volume-control .volume-bar:hover .volume-progress:before {
+          -webkit-transform: scale(1, 1);
+          -ms-transform: scale(1, 1);
+          transform: scale(1, 1); }
+      .kkplayer .kkplayer-controls .kkplayer-volume-control .volume-track {
+        height: 4px;
+        width: 100%;
+        top: 50%;
+        right: 0;
+        -webkit-transition: height 0.2s linear;
+        transition: height 0.2s linear; }
+      .kkplayer .kkplayer-controls .kkplayer-volume-control .volume-progress {
+        height: 100%;
+        width: 100%;
+        position: relative; }
+        .kkplayer .kkplayer-controls .kkplayer-volume-control .volume-progress:before {
+          -webkit-transform: scale(0, 0);
+          -ms-transform: scale(0, 0);
+          transform: scale(0, 0);
+          position: absolute;
+          top: -7px;
+          right: -7px;
+          font-size: 14px;
+          color: #fff;
+          -webkit-transition: transform 0.3s ease;
+          transition: transform 0.3s ease; }
+    .kkplayer .kkplayer-controls .kkplayer-progress-control {
+      min-width: 4em;
+      height: 100%; }
+      .kkplayer .kkplayer-controls .kkplayer-progress-control .progress-bar {
+        height: 4px;
+        -webkit-box-flex: auto;
+        -moz-box-flex: auto;
+        -webkit-flex: auto;
+        -ms-flex: auto;
+        flex: auto;
+        outline: 0;
+        position: relative;
+        cursor: pointer;
+        padding: 0; }
+        .kkplayer .kkplayer-controls .kkplayer-progress-control .progress-bar .loaded-progress {
+          position: absolute;
+          height: 100%;
+          left: 0;
+          top: 0;
+          background-color: rgba(255, 255, 255, 0.5);
+          width: 0; }
+          .kkplayer .kkplayer-controls .kkplayer-progress-control .progress-bar .loaded-progress:before {
+            position: absolute;
+            color: #fff;
+            -webkit-transition: all 0.2s linear;
+            transition: all 0.2s linear; }
+        .kkplayer .kkplayer-controls .kkplayer-progress-control .progress-bar .cursor-time {
+          position: absolute;
+          bottom: 12px;
+          left: 0;
+          -webkit-transform: translate(-50%, 0);
+          -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0); }
+      .kkplayer .kkplayer-controls .kkplayer-progress-control .label-time span {
+        -webkit-box-flex: none;
+        -moz-box-flex: none;
+        -webkit-flex: none;
+        -ms-flex: none;
+        flex: none;
+        font-size: 10px;
+        margin: 0 4px; }
+      .kkplayer .kkplayer-controls .kkplayer-progress-control .current-time {
+        color: #fff; }
+      .kkplayer .kkplayer-controls .kkplayer-progress-control .remain-time {
+        color: rgba(255, 255, 255, 0.6); }
+    .kkplayer .kkplayer-controls .kkplayer-remaining-time {
+      -webkit-box-flex: none;
+      -moz-box-flex: none;
+      -webkit-flex: none;
+      -ms-flex: none;
+      flex: none;
+      width: 40px;
+      height: 100%;
+      -moz-user-select: none;
+      -webkit-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      display: -webkit-box;
+      display: -moz-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-align-items: center;
+      align-items: center;
+      -webkit-justify-content: center;
+      justify-content: center; }
+      .kkplayer .kkplayer-controls .kkplayer-remaining-time span {
+        font-size: 10px;
+        color: #fff; }
+    .kkplayer .kkplayer-controls .kkplayer-fullscreen-control {
+      -webkit-box-flex: none;
+      -moz-box-flex: none;
+      -webkit-flex: none;
+      -ms-flex: none;
+      flex: none;
+      width: 40px;
+      height: 100%;
+      text-align: center;
+      cursor: pointer; }
+      .kkplayer .kkplayer-controls .kkplayer-fullscreen-control:hover:before {
+        text-shadow: 0 0 1em #fff; }
+
+@-webkit-keyframes spinner {
+  from {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(-720deg);
+    -ms-transform: rotate(-720deg);
+    transform: rotate(-720deg); } }
+
+@keyframes spinner {
+  from {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg); }
+  to {
+    -webkit-transform: rotate(-720deg);
+    -ms-transform: rotate(-720deg);
+    transform: rotate(-720deg); } }
