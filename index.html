@@ -9,12 +9,8 @@
         <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
         <!-- Custom NProgress stylesheet -->
         <link rel="stylesheet" href="plugin/nprogress/nprogress.css"/>
-
-        <!-- KKPlayer stylesheet -->
-        <link rel="stylesheet" href="plugin/kkplayer/player/kkPlayer.css">
-        <link rel="stylesheet" href="plugin/kkplayer/player/icons.css">
-        <link rel="stylesheet" href="plugin/kkplayer/player/skin-sky.css">
-
+        <!-- Date Range Picker stylesheet -->
+        <link rel="stylesheet" href="plugin/daterangepicker/daterangepicker.css">
         <!-- Custom stylesheet -->
         <link rel="stylesheet" href="css/main.css">
 
@@ -45,20 +41,11 @@
 
             <!-- Search bar starts -->
             <div class="row">
-                <div class="col-md-8 col-sm-10">
+                <div class="col-lg-6 col-lg-offset-3 col-md-8 col-md-offset-2 col-sm-10 col-sm-offset-1">
                     <form class="form-search">
                         <div class="input-group input-group-lg">
-                            <input type="text" class="form-control" placeholder="Search for...">
+                            <input type="text" class="form-control" placeholder="请输入关键词...">
                             <div class="input-group-btn">
-                                <button type="button" class="btn btn-default" id="dropdownMenu1" data-toggle="dropdown">
-                                    Options <span class="caret"></span>
-                                </button>
-                                <ul class="dropdown-menu dropdown-menu-left" role="menu" aria-labelledby="dropdownMenu1">
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
-                                    <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
-                                </ul>
                                 <button type="button" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
                             </div>
                         </div>
@@ -74,71 +61,64 @@
                 <div class="col-xs-12">
                     <form class="form-horizontal well" role="form">
                         <div class="form-group">
-                            <label class="col-sm-1" for="option1">选项</label>
-                            <div id="option1" class="btn-group col-sm-11" data-toggle="buttons">
-                                <label class="btn btn-primary btn-xs">
-                                    <input type="checkbox" autocomplete="off"> Checkbox 1 (pre-checked)
+                            <label class="col-sm-1 control-label" for="time-picker">时 间</label>
+                            <div id="time-picker" class="col-sm-4 btn-group">
+                                <div class="input-group" style="width:200px">
+                                    <input type="text" class="form-control input-sm col-sm-11" placeholder="请选择时间范围...">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-default btn-sm" type="button">清除</button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-1 control-label" for="source-picker">信 源</label>
+                            <div id="source-picker" class="col-sm-11 btn-group btn-group-sm" data-toggle="buttons">
+                                <label class="btn btn-primary">
+                                    <input type="checkbox" autocomplete="off"> 信 源 1
                                 </label>
-                                <label class="btn btn-primary btn-xs">
-                                    <input type="checkbox" autocomplete="off"> Checkbox 2
+                                <label class="btn btn-primary">
+                                    <input type="checkbox" autocomplete="off"> 信 源 2
                                 </label>
-                                <label class="btn btn-primary btn-xs">
-                                    <input type="checkbox" autocomplete="off"> Checkbox 3
+                                <label class="btn btn-primary">
+                                    <input type="checkbox" autocomplete="off"> 信 源 3
+                                </label>
+                                <label class="btn btn-primary">
+                                    <input type="checkbox" autocomplete="off"> 信 源 4
+                                </label>
+                                <label class="btn btn-primary">
+                                    <input type="checkbox" autocomplete="off"> 信 源 5
                                 </label>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-1" for="option2">选项2</label>
-                            <div id="option2" class="btn-group col-sm-11" data-toggle="buttons">
-                                <label class="btn btn-primary btn-xs">
-                                    <input type="checkbox" autocomplete="off"> Checkbox 1
+                            <label class="col-sm-1 control-label" for="channel-picker">频 道</label>
+                            <div id="channel-picker" class="col-sm-11 btn-group btn-group-sm" data-toggle="buttons">
+                                <label class="btn btn-primary">
+                                    <input type="checkbox" autocomplete="off"> 频 道 1
                                 </label>
-                                <label class="btn btn-primary btn-xs">
-                                    <input type="checkbox" autocomplete="off"> Checkbox 2
+                                <label class="btn btn-primary">
+                                    <input type="checkbox" autocomplete="off"> 频 道 2
                                 </label>
-                                <label class="btn btn-primary btn-xs">
-                                    <input type="checkbox" autocomplete="off"> Checkbox 3
-                                </label>
-                                <label class="btn btn-primary btn-xs">
-                                    <input type="checkbox" autocomplete="off"> Checkbox 1
-                                </label>
-                                <label class="btn btn-primary btn-xs">
-                                    <input type="checkbox" autocomplete="off"> Checkbox 2
-                                </label>
-                                <label class="btn btn-primary btn-xs">
-                                    <input type="checkbox" autocomplete="off"> Checkbox 3
-                                </label>
-                                <label class="btn btn-primary btn-xs">
-                                    <input type="checkbox" autocomplete="off"> Checkbox 1
-                                </label>
-                                <label class="btn btn-primary btn-xs">
-                                    <input type="checkbox" autocomplete="off"> Checkbox 2
-                                </label>
-                                <label class="btn btn-primary btn-xs">
-                                    <input type="checkbox" autocomplete="off"> Checkbox 3
-                                </label>
-                                <label class="btn btn-primary btn-xs">
-                                    <input type="checkbox" autocomplete="off"> Checkbox 1
-                                </label>
-                                <label class="btn btn-primary btn-xs">
-                                    <input type="checkbox" autocomplete="off"> Checkbox 2
-                                </label>
-                                <label class="btn btn-primary btn-xs">
-                                    <input type="checkbox" autocomplete="off"> Checkbox 3
+                                <label class="btn btn-primary">
+                                    <input type="checkbox" autocomplete="off"> 频 道 3
                                 </label>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label class="col-sm-1" for="option3">选项3</label>
-                            <div id="option3" class="btn-group col-sm-11" data-toggle="buttons">
-                                <label class="btn btn-primary btn-xs">
-                                    <input type="checkbox" autocomplete="off"> Checkbox 1 (pre-checked)
+                            <label class="col-sm-1 control-label" for="type-picker">类 型</label>
+                            <div id="type-picker" class="col-sm-11 btn-group btn-group-sm" data-toggle="buttons">
+                                <label class="btn btn-primary">
+                                    <input type="checkbox" autocomplete="off"> 图 片
                                 </label>
-                                <label class="btn btn-primary btn-xs">
-                                    <input type="checkbox" autocomplete="off"> Checkbox 2
+                                <label class="btn btn-primary">
+                                    <input type="checkbox" autocomplete="off"> 视 频
                                 </label>
-                                <label class="btn btn-primary btn-xs">
-                                    <input type="checkbox" autocomplete="off"> Checkbox 3
+                                <label class="btn btn-primary">
+                                    <input type="checkbox" autocomplete="off"> 音 频
+                                </label>
+                                <label class="btn btn-primary">
+                                    <input type="checkbox" autocomplete="off"> 纯 文 本
                                 </label>
                             </div>
                         </div>
@@ -382,9 +362,9 @@
         </div>
 
         <!-- JQuery -->
-        <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+        <script src="js/jquery.min.js"></script>
         <!-- Bootstrap JavaScript -->
-        <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
 
         <!-- Picture modal starts -->
         <div class="modal fade" id="picture-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -468,9 +448,10 @@
 
         <!-- Scroll to top -->
         <span class="totop"><a href="#"><i class="glyphicon glyphicon-chevron-up"></i></a></span>
-
-        <!-- KKPlayer JavaScript -->
-        <script src="plugin/kkplayer/kkplayer.js"></script>
+        <!-- Moment.js -->
+        <script src="plugin/daterangepicker/moment.min.js"></script>
+        <!-- Custom Date Range Picker JavaScript -->
+        <script src="plugin/daterangepicker/daterangepicker.js"></script>
         <!-- Custom JavaScript -->
         <script src="js/main.js"></script>
 
